@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Deresze</title>
+		<LINK href="http://192.168.102.162/deresze/web/style.css" rel="stylesheet" type="text/css">
+    </head> 
+    <body>
+		<a href="{{ path('homepage') }}"> <img id="logo" src="http://dev.ioki.com.pl/~apadol/impress/logo.png"></a>
+		<h1>deresze.ioki.com.pl</h1>
+		<h2>Wprowadź nowego Deresza:</h2>
+		
+		<form action="#" id="newDeresz" method="post">
+			{{ form_widget(nowyDeresz) }}
+			<input type="submit" name="submit"/>
+		</form>
+		
+    </body>
+</html>

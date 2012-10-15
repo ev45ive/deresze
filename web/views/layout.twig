@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IOKI DD comics</title>
+		<LINK href="http://192.168.102.162/deresze/web/style.css" rel="stylesheet" type="text/css">
+    </head> 
+    <body>
+		<a href="{{ path('homepage') }}"> <img id="logo" src="http://dev.ioki.com.pl/~apadol/impress/logo.png"></a>
+		<h1>deresze.ioki.com.pl</h1>
+		<h2>Najnowsze Deresze:</h2>
+		<a href="{{ path('new') }}">Dodaj Deresza</a>
+        <ul id="items">
+        {% for key, item in data %}
+            <li><a href="{{ path('show', {id: item.id}) }}">{{ item.title }} by {{ item.author }}</a></li>
+        {% endfor %}
+        </ul>
+    </body>
+</html>
